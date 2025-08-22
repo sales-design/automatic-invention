@@ -17,7 +17,7 @@ export interface DatabaseResponse<T> {
 }
 
 class SteinAPIService {
-  private apiUrl = "https://api.steinhq.com/v1/storages/68a87feeaffba40a62f0dad2"
+  private apiUrl = "https://api.steinhq.com/v1/storages/68a89238affba40a62f0f182"
   private possibleSheetNames = ["Sheet1", "Hoja1", "Hoja 1", "inventory", "Inventory", "almacén", "almacen"]
   private sheetName = "Sheet1" // Will be updated when we find the correct one
   private refreshInterval: NodeJS.Timeout | null = null
@@ -446,12 +446,13 @@ class SteinAPIService {
       this.refreshInterval = setInterval(async () => {
         try {
           if (!this.fallbackMode) {
+            console.log("[v0] Starting 16-minute scheduled API check...")
             await this.notifySubscribers()
           }
         } catch (error) {
           console.error("Error during auto-refresh:", error)
         }
-      }, 5000)
+      }, 960000) // 16 minutes = 16 * 60 * 1000 = 960000ms
     }
 
     return () => {
