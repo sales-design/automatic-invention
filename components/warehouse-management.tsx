@@ -855,10 +855,10 @@ export default function WarehouseManagement() {
         <div className="mb-8 text-center">
           <h1 className="text-4xl font-medium text-[#124734] mb-2">ORTOCANIS</h1>
           <h2 className="text-2xl font-normal text-[#124734] mb-2">Sistema de Gestión de Almacén</h2>
-          <p className="text-[#0f3d2a] font-normal">Control inteligente de inventario con Google Apps Script</p>
+          <p className="text-[#0f3d2a] font-normal">Control inteligente de inventario</p>
           <div className="mt-2 flex items-center justify-center gap-2">
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-sm text-[#0f3d2a]">Sincronización con Google Apps Script activa</span>
+            <span className="text-sm text-[#0f3d2a]">Sistema sincronizado</span>
           </div>
         </div>
 
